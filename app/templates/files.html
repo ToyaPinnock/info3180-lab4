@@ -1,13 +1,11 @@
 {% extends "base.html" %} {% block main %}
-<div>
+
+<div id="contain">
     {% for f in fil %}
-
-    <div id="contain">
-        <img src="{{url_for('static',filename= 'uploads/' + f )}}">
+    <div id="item">
+        <img src="{{url_for('static',filename= 'uploads/' + f )}}" height=300 width=320>
     </div>
-
     {%endfor%}
-
 </div>
 
 {% endblock %}
